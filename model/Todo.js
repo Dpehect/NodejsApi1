@@ -11,7 +11,11 @@ const TodoSchema = new mongoose.Schema({
   },
   sentence: {
     type: String,
-    required: true,
+    reuired: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
   },
 });
 
