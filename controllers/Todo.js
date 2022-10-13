@@ -11,9 +11,9 @@ const getTodos = (req, res) => {
 
 const createTodo = (req, res) => {
   const todo = new Todo({
-    title: req.body.title,
-    description: req.body.description,
-    completed: req.body.completed,
+    word: req.body.word,
+    mean: req.body.mean,
+    sentence: req.body.sentence,
   });
 
   todo.save((err, todo) => {
@@ -29,9 +29,9 @@ const updateTodo = (req, res) => {
     { _id: req.params.todoID },
     {
       $set: {
-        title: req.body.title,
-        description: req.body.description,
-        completed: req.body.completed,
+        word: req.body.word,
+        mean: req.body.mean,
+        sentence: req.body.sentence,
       },
     },
     { new: true },
