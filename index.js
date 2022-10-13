@@ -30,4 +30,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(router);
 
-app.listen(process.env.PORT, "0.0.0.0");
+app.listen(PORT, async () => {
+  console.log(`server up on port ${PORT}`);
+});
